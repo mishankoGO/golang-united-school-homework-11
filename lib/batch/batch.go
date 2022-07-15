@@ -43,7 +43,7 @@ func getBatch(n int64, pool int64) []user {
 	for i := 0; int64(i) < n; i++ {
 		wg.Add(1)
 
-		// fill empty struct to channel
+		// fill channel with empty struct
 		sem <- struct{}{}
 
 		// run goroutine
